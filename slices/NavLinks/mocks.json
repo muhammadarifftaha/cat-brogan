@@ -1,0 +1,21 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "union",
+				"type": "Text"
+			},
+			"page": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			}
+		},
+		"items": []
+	}
+]

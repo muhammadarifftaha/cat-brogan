@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"video_embed_html": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6stlCkUDG_s?si=FCDnjjftiyUFQWIq\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+			}
+		},
+		"items": []
+	}
+]

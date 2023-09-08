@@ -1,10 +1,14 @@
+/** @format */
+
 import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import { isFilled } from "@prismicio/client";
+import { isFilled, asLink } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
 
 import { components } from "@/slices";
 import { createClient } from "@/prismicio";
+
+type Params = { uid: string };
 
 export default function Page({
   page,
@@ -17,24 +21,39 @@ export default function Page({
           <meta name="description" content={page.data.meta_description} />
         ) : null}
       </Head>
-
       <SliceZone slices={page.data.slices} components={components} />
-      <div className="h-screen" />
     </>
   );
 }
 
-export async function getStaticProps({ previewData }: GetStaticPropsContext) {
+export async function getStaticProps({
+  params,
+  previewData,
+}: GetStaticPropsContext<Params>) {
   // The `previewData` parameter allows your app to preview
   // drafts from the Page Builder.
   const client = createClient({ previewData });
 
-  const header = await client.getSingle("header");
-  const footer = await client.getSingle("footer");
-  // The query fetches the page's data based on the current URL.
-  const page = await client.getSingle("home_page");
+  const [page, header, footer] = await Promise.all([
+    client.getByUID("landing_page", params!.uid),
+    client.getSingle("header"),
+    client.getSingle("footer"),
+  ]);
 
   return {
     props: { page, header, footer },
+  };
+}
+
+export async function getStaticPaths() {
+  const client = createClient();
+
+  const pages = await client.getAllByType("landing_page");
+
+  return {
+    paths: pages.map((page) => {
+      return asLink(page);
+    }),
+    fallback: false,
   };
 }

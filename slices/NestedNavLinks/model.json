@@ -1,0 +1,44 @@
+{
+  "id": "nested_nav_links",
+  "type": "SharedSlice",
+  "name": "NestedNavLinks",
+  "description": "NestedNavLinks",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        },
+        "page": {
+          "type": "Link",
+          "config": {
+            "label": "Page",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        }
+      },
+      "items": {
+        "page": {
+          "type": "Link",
+          "config": {
+            "label": "Page",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

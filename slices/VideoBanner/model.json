@@ -1,0 +1,26 @@
+{
+  "id": "video_banner",
+  "type": "SharedSlice",
+  "name": "VideoBanner",
+  "description": "VideoBanner",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "video_embed_html": {
+          "type": "Text",
+          "config": {
+            "label": "Video Embed HTML",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

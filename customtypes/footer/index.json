@@ -1,0 +1,18 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "test_text": {
+        "type": "Text",
+        "config": {
+          "label": "Test text",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

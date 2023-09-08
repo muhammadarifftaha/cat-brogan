@@ -1,0 +1,32 @@
+{
+  "id": "header",
+  "label": "Header",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "header_title": {
+        "type": "Text",
+        "config": {
+          "label": "Header Title",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "nav_links": {
+              "type": "SharedSlice"
+            },
+            "nested_nav_links": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}
