@@ -12,11 +12,11 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "video_embed_html": {
+        "youtube_video_id": {
           "type": "Text",
           "config": {
-            "label": "Video Embed HTML",
-            "placeholder": ""
+            "label": "YouTube Video ID",
+            "placeholder": "If video url is youtube.com/watch?v=5iftJO08ko8, video ID is 5iftJO08ko8"
           }
         }
       },

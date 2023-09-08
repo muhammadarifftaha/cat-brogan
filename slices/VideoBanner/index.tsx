@@ -16,10 +16,16 @@ const VideoBanner = ({ slice }: VideoBannerProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      dangerouslySetInnerHTML={{
-        __html: slice.primary.video_embed_html as string,
-      }}
-      className="w-full h-full relative overflow-hidden px-16 py-8 [&_iframe]:aspect-video [&_iframe]:w-full [&_iframe]:h-auto"></section>
+      className="w-full h-full relative overflow-hidden px-16 py-8 [&_iframe]:aspect-video [&_iframe]:w-full [&_iframe]:h-auto">
+      {slice.primary.youtube_video_id && (
+        <iframe
+          title={slice.primary.youtube_video_id as string}
+          className="w-full h-full"
+          src={`https://www.youtube.com/embed/${slice.primary.youtube_video_id}?rel-0&autoplay=1`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen></iframe>
+      )}
+    </section>
   );
 };
 

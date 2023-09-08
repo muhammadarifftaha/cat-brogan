@@ -447,14 +447,14 @@ export type NestedNavLinksSlice = prismic.SharedSlice<
  */
 export interface VideoBannerSliceDefaultPrimary {
   /**
-   * Video Embed HTML field in *VideoBanner → Primary*
+   * YouTube Video ID field in *VideoBanner → Primary*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: video_banner.primary.video_embed_html
+   * - **Placeholder**: If video url is youtube.com/watch?v=5iftJO08ko8, video ID is 5iftJO08ko8
+   * - **API ID Path**: video_banner.primary.youtube_video_id
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  video_embed_html: prismic.KeyTextField;
+  youtube_video_id: prismic.KeyTextField;
 }
 
 /**
